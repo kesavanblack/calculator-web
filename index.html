@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 30%;
+        }
+        div{
+
+            display: flex;
+           flex-wrap: wrap;
+           gap: 10px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: aqua;
+        }
+        button:hover{
+            background-color: blue;
+        }
+        button:active{
+            background-color: red;
+        }
+        button:focus{
+            background-color: yellow;
+        }
+        button:visited{
+            background-color: green;
+        }
+        button:focus-visible{
+            background-color: pink;
+        }
+        button:focus-within{
+            background-color: orange;
+        }
+        button:focus-visible{
+            background-color: purple;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            background-color: rgb(193, 214, 214);
+        }
+        
+    </style>
+</head>
+<body>
+    <p id="p">
+
+</p>
+
+
+    <input type="text" id="a1"> <br> <br>
+    <input type="text" id="a2"><br> <br>
+    <input type="text" id="a3"><br> <br>
+    
+
+    <div>
+    <button onclick="storevalue('1')">1</button>
+    <button onclick="storevalue('2')">2</button>
+    <button onclick="storevalue('3')">3</button>
+    <button onclick="storevalue('4')">4</button>
+    <button onclick="storevalue('5')">5</button>
+    <button onclick="storevalue('6')">6</button>
+    <button onclick="storevalue('7')">7</button>
+    <button onclick="storevalue('8')">8</button>
+    <button onclick="storevalue('9')">9</button>
+    <button onclick="storevalue('0')">0</button>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="mul()">mul</button>
+    <button onclick="div()">div</button>
+    <button onclick="sqr()">sqr</button>
+    <button onclick="root()">root</button>
+    <button onclick="clear()">clear</button>
+   
+   
+</div>
+    <script>
+      
+            const a=document.getElementById("a1");
+            const b=document.getElementById("a2");
+           const c=document.getElementById("a3");
+           let one = true; 
+           function storevalue(value){
+            if(one){
+                a.value+=value;
+                one=false;
+           }else{
+                b.value+=value;
+                one=true;
+            }
+
+           }
+        function add(){
+        
+         c.value =Number(a.value)+Number(b.value) ;
+             
+        }
+        function sub(){
+        
+            c.value =Number(a.value)-Number(b.value) ;
+                
+           }
+           function mul(){
+        
+            c.value =Number(a.value)*Number(b.value) ;
+                
+           }
+           function div(){
+        
+            c.value =Number(a.value)/Number(b.value) ;
+                
+           }
+           function sqr(){
+        
+            c.value =Number( Math.sqrt(a.value))
+                
+           }
+           function root(){
+        
+            c.value =Number( a.value)*(a.value)
+                
+           }
+           function clear(){
+            a.value=' '
+                   }
+           
+
+
+         
+    </script>
+</body>
+</html>
